@@ -1,0 +1,158 @@
+/* Apply a radial gradient background to the entire page */
+body {
+  background-image: radial-gradient(circle, #5493f4, #93abf6, #bfc5f9, #e2e1fb, #ffffff);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Header container with image and overlay for title/status */
+.header-container {
+  position: relative;
+  width: 95vw;
+  max-width: 100%;
+  margin-top: 1rem;
+}
+
+/* Style the header image */
+.header-image {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Apply pop-out effect on hover for the header image */
+.header-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Overlay container for the title and status text */
+.title-overlay {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  color: white;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Style for the title text */
+.title-overlay h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* Style for the status text */
+.title-overlay .status-text {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Style the table container */
+.table-container {
+  width: 95vw;
+  max-width: 100%;
+  padding: 0 2%;
+  box-sizing: border-box;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Style the table to match background */
+.table {
+  color: #333;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  table-layout: fixed;
+}
+
+/* Style table headers */
+.table thead th {
+  color: #000;
+  text-align: center;
+}
+
+/* Style table rows */
+.table tbody tr {
+  border-color: #ddd;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Add pop-out effect when hovering over a row */
+.table tbody tr:hover {
+  transform: scale(1.02);
+}
+
+/* Style table rows with errors */
+.table-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Center buttons in the Actions column */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Style buttons */
+.btn-primary, .btn-secondary {
+  margin: 0;
+}
+
+/* Modal-like container for JSON data */
+.json-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  max-width: 800px;
+  max-height: 80vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+/* Style for JSON data display */
+.json-modal pre {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 4px;
+  max-height: calc(80vh - 60px);
+  overflow-y: auto;
+}
+
+/* Close button style for JSON modal */
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  background: #000;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 2;
+  padding: 5px 10px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 12px;
+  text-align: center;
+}

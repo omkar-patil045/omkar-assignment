@@ -1,0 +1,27 @@
+Overview
+This project consists of a Node.js server and a React client. The server fetches data from multiple endpoints and broadcasts it via WebSocket. The client displays this data in a web interface.
+Setup
+Server
+1.	Navigate to the server directory:
+2.	Install dependencies:
+npm install
+3.	Start the server:
+o	Using Node.js:
+node dist/server.js
+o	Using ts-node (development):
+npx ts-node src/server.ts
+4.	The server runs on port 3001 and provides WebSocket data.
+Client
+1.	Navigate to the client directory:
+cd client
+2.	Install dependencies:
+npm install
+3.	Start the client:
+npm start
+This will build and open the client application in your browser.
+WebSocket
+The client connects to the WebSocket server at ws://localhost:3001. Ensure the server is running before starting the client.
+Troubleshooting
+•	WebSocket issues: Verify that the server is running and the URL is correct.
+•	Data display issues: Check browser console for errors.
+

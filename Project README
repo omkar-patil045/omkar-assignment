@@ -1,3 +1,4 @@
+Project README
 Overview
 This project consists of a Node.js server and a React client. The server fetches data from multiple endpoints and broadcasts it via WebSocket. The client displays this data in a web interface.
 Setup
@@ -10,7 +11,9 @@ o	Using Node.js:
 node dist/server.js
 o	Using ts-node (development):
 npx ts-node src/server.ts
-4.	The server runs on port 3001 and provides WebSocket data.
+The server runs on port 3001 and provides WebSocket data.
+Deployed Server URL: https://omkar-assignment.onrender.com
+
 Client
 1.	Navigate to the client directory:
 cd client
@@ -19,6 +22,8 @@ npm install
 3.	Start the client:
 npm start
 This will build and open the client application in your browser.
+Deployed Client URL: https://omkar-assignment-1.onrender.com
+
 WebSocket
 The client connects to the WebSocket server at ws://localhost:3001. Ensure the server is running before starting the client.
 Troubleshooting
